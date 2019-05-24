@@ -6,7 +6,7 @@ runbenchmarks(
         id="origin/multithreading",
         env = Dict("JULIA_NUM_THREADS"=>4),
         juliacmd=`julia -O3`
-    )
+    ),
     baseline=BenchmarkConfig(
         id="master",
         env = Dict("JULIA_NUM_THREADS"=>1),
@@ -20,7 +20,7 @@ runbenchmarks(
         id="origin/multithreading",
         env = Dict("JULIA_NUM_THREADS"=>1),
         juliacmd=`julia -O3`
-    )
+    ),
     baseline=BenchmarkConfig(
         id="master",
         env = Dict("JULIA_NUM_THREADS"=>1),
