@@ -3,7 +3,7 @@ module BenchmarkBot
 using PkgBenchmark, GitHub, JSON, UUIDs, Dates, Base64
 export BenchmarkConfig, submit_report, submit_issue, runbenchmarks
 
-@static if haskey(ENV, "GITHUB_BENCHMARK_TOKEN")
+if haskey(ENV, "GITHUB_BENCHMARK_TOKEN")
 const TOKEN = authenticate(ENV["GITHUB_BENCHMARK_TOKEN"])
 else
 const TOKEN = nothing
