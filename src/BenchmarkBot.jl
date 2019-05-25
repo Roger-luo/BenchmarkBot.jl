@@ -1,7 +1,7 @@
 module BenchmarkBot
 
 using PkgBenchmark, GitHub, JSON, UUIDs, Dates, Base64
-export BenchmarkConfig, submit_report, submit_issue, runbenchmarks
+export BenchmarkConfig, submit_report, submit_issue, runbenchmarks, token
 
 function token()
     if haskey(ENV, "GITHUB_BENCHMARK_TOKEN")
